@@ -5,7 +5,7 @@
  * Description: Advanced tools for Moto
  * Author:      TemplateMonster
  * Author URL:  http://www.templatemonster.com/wordpress-themes.php
- * Version:     1.0.2
+ * Version:     1.0.3
  * Text Domain: mti
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -40,7 +40,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 *
 		 * @var string
 		 */
-		private $version = '1.0.2';
+		private $version = '1.0.3';
 
 		/**
 		 * Plugin dir URL
