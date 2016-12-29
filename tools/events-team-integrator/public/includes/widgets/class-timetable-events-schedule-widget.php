@@ -22,21 +22,21 @@ class Mti_Timetable_Events_Schedule_Widget extends Cherry_Abstract_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'mti-timetable-events-schedule';
-		$this->widget_description = esc_html__( 'Display an information about selected user.', 'mti' );
+		$this->widget_description = esc_html__( 'Display an information about selected user.', 'moto-tools-integration' );
 		$this->widget_id          = 'mti-timetable-events-schedule';
-		$this->widget_name        = esc_html__( 'Timetable Events Schedule', 'mti' );
+		$this->widget_name        = esc_html__( 'Timetable Events Schedule', 'moto-tools-integration' );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'value' => esc_html__( 'Timetable Events Schedule', 'mti' ),
-				'label' => esc_html__( 'Title', 'mti' ),
+				'value' => esc_html__( 'Timetable Events Schedule', 'moto-tools-integration' ),
+				'label' => esc_html__( 'Title', 'moto-tools-integration' ),
 			),
 			'per_page' => array(
 				'type'      => 'stepper',
 				'value'     => 3,
 				'max_value' => 50,
 				'min_value' => 0,
-				'label'     => esc_html__( 'Events count ( Set 0 to show all. )', 'mti' ),
+				'label'     => esc_html__( 'Events count ( Set 0 to show all. )', 'moto-tools-integration' ),
 			),
 			'columns_number' => array(
 				'type'       => 'stepper',
@@ -44,28 +44,28 @@ class Mti_Timetable_Events_Schedule_Widget extends Cherry_Abstract_Widget {
 				'max_value'  => '4',
 				'min_value'  => '1',
 				'step_value' => '1',
-				'label'      => esc_html__( 'Columns number', 'mti' ),
+				'label'      => esc_html__( 'Columns number', 'moto-tools-integration' ),
 			),
 			'order' => array(
 				'type'    => 'radio',
 				'value'   => 'DESC',
 				'options' => array(
 					'DESC' => array(
-						'label' => esc_html__( 'DESC', 'mti' ),
+						'label' => esc_html__( 'DESC', 'moto-tools-integration' ),
 						'slave' => 'DESC',
 					),
 					'ASC' => array(
-						'label' => esc_html__( 'ASC', 'mti' ),
+						'label' => esc_html__( 'ASC', 'moto-tools-integration' ),
 						'slave' => 'ASC',
 					),
 				),
-				'label'   => esc_html__( 'Choose taxonomy type', 'monstroid2' ),
+				'label'   => esc_html__( 'Choose taxonomy type', 'moto-tools-integration' ),
 			),
 			'show_title' => array(
 				'type'  => 'switcher',
 				'value' => 'true',
 				'style' => 'small',
-				'label' => esc_html__( 'Display title', 'mti' ),
+				'label' => esc_html__( 'Display title', 'moto-tools-integration' ),
 			),
 			'excerpt_length' => array(
 				'type'       => 'stepper',
@@ -73,19 +73,19 @@ class Mti_Timetable_Events_Schedule_Widget extends Cherry_Abstract_Widget {
 				'max_value'  => '500',
 				'min_value'  => '0',
 				'step_value' => '1',
-				'label'      => esc_html__( 'Excerpt words length ( Set 0 to hide excerpt. )', 'monstroid2' ),
+				'label'      => esc_html__( 'Excerpt words length ( Set 0 to hide excerpt. )', 'moto-tools-integration' ),
 			),
 			'show_participants' => array(
 				'type'  => 'switcher',
 				'value' => 'true',
 				'style' => 'small',
-				'label' => esc_html__( 'Display participants', 'mti' ),
+				'label' => esc_html__( 'Display participants', 'moto-tools-integration' ),
 			),
 			'show_schedule' => array(
 				'type'  => 'switcher',
 				'value' => 'true',
 				'style' => 'small',
-				'label' => esc_html__( 'Display schedule', 'mti' ),
+				'label' => esc_html__( 'Display schedule', 'moto-tools-integration' ),
 			),
 		);
 
