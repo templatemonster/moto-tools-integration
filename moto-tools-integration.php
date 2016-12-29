@@ -55,6 +55,13 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		public $plugin_path = null;
 
 		/**
+		 * Plugin slug
+		 *
+		 * @var string
+		 */
+		public $plugin_path = '';
+
+		/**
 		 * A reference to an instance of cherry framework core class.
 		 *
 		 * @since 1.0.0
@@ -64,7 +71,8 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 
 		public function __construct() {
 			$this->plugin_path = plugin_dir_path( __FILE__ );
-			$this->plugin_url = plugin_dir_url( __FILE__ );
+			$this->plugin_url  = plugin_dir_url( __FILE__ );
+			$this->plugin_slug = basename( dirname( __FILE__ ) ) );
 
 			add_action( 'plugins_loaded', array( $this, 'lang' ) );
 
@@ -75,6 +83,10 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 
 			// Load the events team integrator includes.
 			add_action( 'after_setup_theme', array( $this, 'events_team_integrator_init' ), 4 );
+
+			if ( is_admin() ) {
+				$this->_admin();
+			}
 		}
 
 		/**
@@ -84,6 +96,22 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 */
 		public function lang() {
 			load_plugin_textdomain( 'mti', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		}
+
+		/**
+		 * Include files for administrative side.
+		 *
+		 * @since 1.0.0
+		 */
+		private function _admin() {
+			require_once( $this->plugin_path . 'admin/includes/class-cherry-update/class-cherry-plugin-update.php' );
+
+			$updater = new Cherry_Plugin_Update();
+			$updater->init( array(
+				'version'         => $this->version,
+				'slug'            => $this->plugin_slug,
+				'repository_name' => $this->plugin_slug,
+			) );
 		}
 
 		/**
