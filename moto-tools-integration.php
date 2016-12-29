@@ -72,7 +72,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		public function __construct() {
 			$this->plugin_path = plugin_dir_path( __FILE__ );
 			$this->plugin_url  = plugin_dir_url( __FILE__ );
-			$this->plugin_slug = basename( dirname( __FILE__ ) ) );
+			$this->plugin_slug = basename( dirname( __FILE__ ) );
 
 			add_action( 'plugins_loaded', array( $this, 'lang' ) );
 
