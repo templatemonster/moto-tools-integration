@@ -85,10 +85,6 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 
 			// Load the events team integrator includes.
 			add_action( 'after_setup_theme', array( $this, 'events_team_integrator_init' ), 4 );
-
-			if ( is_admin() ) {
-				$this->_admin();
-			}
 		}
 
 		/**
@@ -98,23 +94,6 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 */
 		public function lang() {
 			load_plugin_textdomain( 'moto-tools-integration', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-		}
-
-		/**
-		 * Include files for administrative side.
-		 *
-		 * @since 1.0.0
-		 */
-		private function _admin() {
-			require_once( $this->plugin_path . 'admin/includes/class-cherry-update/class-cherry-plugin-update.php' );
-
-			$updater = new Cherry_Plugin_Update();
-			$updater->init( array(
-				'version'         => $this->version,
-				'slug'            => $this->plugin_slug,
-				'repository_name' => $this->plugin_slug,
-				'product_name'    => 'templatemonster',
-			) );
 		}
 
 		/**
