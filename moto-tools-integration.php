@@ -59,7 +59,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 *
 		 * @var string
 		 */
-		public $plugin_path = '';
+		public $plugin_slug = '';
 
 		/**
 		 * A reference to an instance of cherry framework core class.
