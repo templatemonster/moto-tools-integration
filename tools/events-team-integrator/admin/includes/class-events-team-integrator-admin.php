@@ -16,7 +16,7 @@ class Events_Team_Integrator_Admin {
 	}
 
 	public function mti_add_custom_box() {
-		add_meta_box( 'event_participants', esc_html__( 'Event participants', 'mti' ), array( $this, 'mti_meta_box_callback' ), 'mp-event', 'normal' );
+		add_meta_box( 'event_participants', esc_html__( 'Event participants', 'moto-tools-integration' ), array( $this, 'mti_meta_box_callback' ), 'mp-event', 'normal' );
 	}
 
 	public function mti_meta_box_callback() {

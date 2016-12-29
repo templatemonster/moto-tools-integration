@@ -65,7 +65,7 @@ class Events_Team_Integrator {
 				echo $this->get_events_loop( $events, $template );
 			echo '</div>';
 		} else {
-			echo '<h5>' . esc_html__( 'Events not found', 'mti' ) . '</h5>';
+			echo '<h5>' . esc_html__( 'Events not found', 'moto-tools-integration' ) . '</h5>';
 		}
 	}
 

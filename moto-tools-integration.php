@@ -6,7 +6,7 @@
  * Author:      TemplateMonster
  * Author URL:  http://www.templatemonster.com/wordpress-themes.php
  * Version:     1.0.3
- * Text Domain: mti
+ * Text Domain: moto-tools-integration
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path: /languages
@@ -97,7 +97,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 * @since 1.0.0
 		 */
 		public function lang() {
-			load_plugin_textdomain( 'mti', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain( 'moto-tools-integration', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		}
 
 		/**
