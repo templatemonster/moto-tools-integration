@@ -111,6 +111,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 				'version'         => $this->version,
 				'slug'            => $this->plugin_slug,
 				'repository_name' => $this->plugin_slug,
+				'product_name'    => 'templatemonster',
 			) );
 		}
 
