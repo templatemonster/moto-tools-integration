@@ -3,7 +3,7 @@
  * Plugin Name: MotoTools Integration
  * Plugin URI:
  * Description: Advanced tools for Moto
- * Version:     1.0.0
+ * Version:     1.0.1
  * Text Domain: mti
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -38,7 +38,7 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 *
 		 * @var string
 		 */
-		private $version = '1.0.0';
+		private $version = '1.0.1';
 
 		/**
 		 * Plugin dir URL
