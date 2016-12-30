@@ -1,3 +1,11 @@
 jQuery( document ).ready( function( $ ) {
-	$( '#mti-mebmers-select' ).select2();
+
+	$mebmersSelect = $( '#mti-mebmers-select' );
+
+	if ( ! $.isFunction( jQuery.fn.select2 ) || ! $mebmersSelect.length ) {
+		return !1;
+	}
+
+	$mebmersSelect.select2();
+
 } )
