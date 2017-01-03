@@ -152,8 +152,8 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 			if ( 'mp-event' !== get_post_type() )
 				return;
 
-			wp_enqueue_script( 'mti-script', $this->plugin_url . 'tools/events-team-integrator/admin/assets/js/script.js', array('jquery') );
-			wp_enqueue_style( 'mti-style', $this->plugin_url . 'tools/events-team-integrator/admin/assets/css/style.css' );
+			wp_enqueue_script( 'mti-script', $this->plugin_url . 'tools/events-team-integrator/admin/assets/js/script.js', array('jquery'), $this->version, true );
+			wp_enqueue_style( 'mti-style', $this->plugin_url . 'tools/events-team-integrator/admin/assets/css/style.css', '', $this->version );
 		}
 
 		/**
