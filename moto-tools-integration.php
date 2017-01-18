@@ -108,6 +108,8 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 				} else {
 					$this->events_team_integrator_public();
 				}
+
+				require_once( $this->plugin_path . 'tools/events-team-integrator/public/includes/widgets/class-timetable-events-schedule-widget.php' );
 			}
 		}
 
@@ -142,7 +144,6 @@ if ( ! class_exists( 'Moto_Tools_Integration' ) ) {
 		 */
 		public function events_team_integrator_public() {
 			require_once( $this->plugin_path . 'tools/events-team-integrator/public/includes/class-events-team-integrator.php' );
-			require_once( $this->plugin_path . 'tools/events-team-integrator/public/includes/widgets/class-timetable-events-schedule-widget.php' );
 			require_once( $this->plugin_path . 'tools/events-team-integrator/public/includes/shortcode/class-timetable-events-schedule-shortcode.php' );
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'events_team_integrator_public_assets' ), 20 );
