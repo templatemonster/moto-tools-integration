@@ -95,7 +95,7 @@ class Events_Team_Integrator {
 			$permalink = get_permalink( $event->ID );
 
 			$image = $this->utility->media->get_image( array(
-				'size'  => 'monstroid2-thumb-m-2',
+				'size'  => 'post-thumbnail',
 				'class' => 'mti-event__ithumbnail-img',
 				'html'  => '<img %2$s src="%3$s" alt="%4$s" %5$s >',
 			), 'post', $event->ID );
